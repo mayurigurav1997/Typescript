@@ -54,8 +54,19 @@ var anyType;
 anyType = 20;
 anyType = false;
 function add(num1, num2) {
-    return num1 + num2;
+    if (num2) {
+        return num1 + num2;
+    }
+    else {
+        return num1;
+    }
 }
 add(5, 10);
-// add(5, '10');
-// add()
+function fullName(person) {
+    console.log("".concat(person.firstName, " ").concat(person.lastName));
+}
+var p = {
+    firstName: "Mayuri",
+    lastName: "Patil",
+};
+fullName(p);
