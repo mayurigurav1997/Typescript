@@ -48,4 +48,29 @@ let myvariable: any = 10;
 
 let myvariable1: unknown = 10;
 // console.log(myvariable1.name);
-(myvariable1 as string).toLowerCase();
+// (myvariable1 as string).toLowerCase();
+
+function hasName(obj: any): obj is { name: string } {
+  return !!obj && typeof obj === "object" && "name" in obj;
+}
+if (hasName(myvariable1)) {
+  console.log(myvariable1.name);
+}
+
+let b = 20;
+// b = true
+
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
+
+let anyType: any;
+anyType = 20;
+anyType = false;
+
+function add(num1: number, num2: number): number {
+  return num1 + num2;
+}
+add(5, 10);
+// add(5, '10');
+// add()

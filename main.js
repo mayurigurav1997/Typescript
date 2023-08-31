@@ -38,4 +38,24 @@ var myvariable = 10;
 // myvariable.toLowerCase();
 var myvariable1 = 10;
 // console.log(myvariable1.name);
-myvariable1.toLowerCase();
+// (myvariable1 as string).toLowerCase();
+function hasName(obj) {
+    return !!obj && typeof obj === "object" && "name" in obj;
+}
+if (hasName(myvariable1)) {
+    console.log(myvariable1.name);
+}
+var b = 20;
+// b = true
+var multiType;
+multiType = 20;
+multiType = true;
+var anyType;
+anyType = 20;
+anyType = false;
+function add(num1, num2) {
+    return num1 + num2;
+}
+add(5, 10);
+// add(5, '10');
+// add()
